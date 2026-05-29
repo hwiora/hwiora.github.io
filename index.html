@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kanghwi Lee - Ph.D. Candidate at ETH Zurich working on machine learning for real-world audio and biological signals.">
+  <meta name="description" content="Kanghwi Lee - Ph.D. Candidate at ETH Zurich working on audio machine learning and computational neuroscience.">
   <meta name="author" content="Kanghwi Lee">
   <meta property="og:title" content="Kanghwi Lee | Research">
-  <meta property="og:description" content="Machine Learning for Real-World Audio and Biological Signals">
+  <meta property="og:description" content="Audio Machine Learning and Computational Neuroscience">
   <meta property="og:type" content="website">
   <title>Kanghwi Lee | Research</title>
   <link rel="stylesheet" href="styles.css">
@@ -32,10 +32,10 @@
       <div class="container hero-inner">
         <p class="eyebrow">Ph.D. Candidate &middot; Institute of Neuroinformatics, ETH Zurich</p>
         <h1 id="hero-title">Kanghwi Lee</h1>
-        <p class="positioning">Machine Learning for Real-World Audio and Biological Signals</p>
+        <p class="positioning">Audio Machine Learning and Computational Neuroscience</p>
         <p class="hero-summary">
-          Representation learning, foundation model adaptation, large-scale audio data curation,
-          and generative modeling grounded in computational neuroscience.
+          Representation learning, foundation model adaptation, and generative modeling
+          for large-scale acoustic data and vocal behavior.
         </p>
         <div class="hero-links" aria-label="Profile links">
           <a class="button button-primary" href="assets/cv/Kanghwi_Lee_CV.pdf">CV</a>
@@ -51,12 +51,13 @@
       <div class="container narrow">
         <h2 id="about-title">About</h2>
         <p>
-          I am a Ph.D. candidate at the Institute of Neuroinformatics, ETH Zurich, working at the
-          intersection of audio machine learning and computational neuroscience. My research develops
-          scalable models and data workflows for real-world audio and biological signals, spanning
-          representation learning, foundation model adaptation, large-scale audio data curation, and
-          generative modeling. I combine quantitative audio analysis with computational modeling to
-          study complex vocal signals and developmental change.
+          I am a Ph.D. candidate at the Institute of Neuroinformatics, ETH Zurich, developing machine learning
+          methods for large-scale acoustic data and vocal behavior. My research spans representation learning,
+          foundation model adaptation, and generative modeling, with work on Whisper-based segmentation,
+          human-in-the-loop clustering, and counterfactual analysis of developmental vocal plasticity. I developed
+          and evaluated an audio curation workflow that reduced annotation time by approximately 50% on a
+          1,454-vocalization benchmark and has been applied to approximately 80,000 hours of recordings.
+          My work is grounded in computational neuroscience and aimed at robust, scalable modeling of real-world audio.
         </p>
       </div>
     </section>
@@ -97,16 +98,16 @@
               <span class="tag">Published</span>
               <span class="meta-text">ICASSP, 2024</span>
             </div>
-            <h3>WhisperSeg: Whisper-Based Segmentation for Human and Animal Vocal Activity</h3>
+            <h3>WhisperSeg: Long-Context Voice Activity Detection for Human and Animal Recordings</h3>
             <p>
-              Adapted a pretrained Whisper Transformer for long-context, token-based voice activity detection,
-              generating onset, offset, and vocalization-type tokens from spectrograms across human and animal recordings.
+              WhisperSeg adapts a pretrained Whisper Transformer for long-context, token-based voice activity detection,
+              generating onset, offset, and vocalization-type tokens directly from audio spectrograms across human and animal recordings.
             </p>
             <p>
               Achieved <strong>segment-wise F1&nbsp;=&nbsp;0.9966</strong> on adult zebra finch recordings and
-              outperformed frame-wise baselines across evaluated species, including noisy marmoset and human recordings.
+              outperformed frame-wise baselines in segment-wise evaluation across all tested datasets, including noisy marmoset and human recordings.
             </p>
-            <p class="card-note">Co-author; contributed to dataset construction and baseline evaluation, and subsequently applied segmentation outputs in large-scale analysis workflows.</p>
+            <p class="card-note">Co-author; developed dataset-processing and baseline-evaluation components for the study, then applied segmentation outputs in subsequent large-scale analysis workflows.</p>
             <div class="card-links">
               <a href="https://doi.org/10.1109/ICASSP48485.2024.10447620" target="_blank" rel="noopener noreferrer">Paper</a>
             </div>
@@ -141,8 +142,8 @@
             <h3>Computational Modeling of Vocal Template Formation</h3>
             <p>
               Investigated how juvenile zebra finches form composite song templates from sequential tutor exposure.
-              Developed a Bayesian causal-inference model fitted to behavioral data from <strong>19 juvenile birds</strong>
-              and <strong>26 syllables</strong>.
+              Developed a <strong>Bayesian causal-inference model</strong> fitted to behavioral data from 19 juvenile birds
+              and 26 syllables.
             </p>
             <div class="card-links">
               <a href="assets/papers/Lee_COSYNE2024_Extended_Abstract.pdf">Extended Abstract</a>
