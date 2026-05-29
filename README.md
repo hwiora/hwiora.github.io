@@ -1,35 +1,22 @@
-# Kanghwi Lee - GitHub Pages Website Update
+# GitHub Pages update: CV link and manuscript proof links
 
-Deploy-ready replacement files for the live user site at `https://hwiora.github.io`.
+Upload the contents of this folder to the root of the `hwiora.github.io` repository.
 
-## Included files
+## Files added or replaced
 
-```text
-hwiora.github.io/
-├── index.html
-├── styles.css
-├── .nojekyll
-└── assets/
-    ├── cv/
-    │   └── Kanghwi_Lee_CV Public.pdf
-    └── papers/
-        └── Lee_COSYNE2024_Extended_Abstract.pdf
-```
+- `index.html` - updates the CV path, removes the Applied Sciences special-issue note, and adds the Trajectory Variance submitted-manuscript links.
+- `styles.css` - retained from the current site package.
+- `.nojekyll` - keeps GitHub Pages on a simple static-file path.
+- `assets/cv/Kanghwi_Lee_CV Public.pdf` - current public CV PDF.
+- `assets/papers/Lee_COSYNE2024_Extended_Abstract.pdf` - COSYNE extended abstract.
+- `assets/papers/Lee_Trajectory_Variance_Interspeech2026_Submitted.pdf` - submitted Interspeech manuscript.
 
-## What changed
+## Remove obsolete file after uploading
 
-- Enabled the CV button in the hero section and bundled the final CV PDF.
-- Updated the headline summary and About text to foreground representation learning, foundation model adaptation, large-scale audio data curation, and generative modeling.
-- Expanded Selected Research to four items: clustering workflow, WhisperSeg, trajectory variance, and COSYNE vocal-template modeling.
-- Added WhisperSeg's segment-wise F1 result and ICASSP positioning.
-- Added the COSYNE extended abstract PDF as a local site asset.
-- Expanded Publications into published papers, submitted manuscript, and conference abstract.
-- Added the Applied Sciences special issue note to the clustering research card.
+Delete `assets/cv/Kanghwi_Lee_CV.pdf` from the repository after the new CV link is live. Otherwise the old direct URL may remain publicly accessible even though it is no longer linked from the site.
 
-## Upload to GitHub Pages
+## Expected live checks after deployment
 
-Upload the **contents** of this folder to the root of your existing `hwiora.github.io` repository, preserving the `assets/` folder structure. Committing these files replaces the current homepage and activates the new CV/PDF links.
-
-## Status-sensitive item
-
-`Trajectory Variance: An Unsupervised Measure of Developmental Vocal Plasticity` is shown as **Submitted for review to Interspeech 2026**. Update the research card, publication entry, and CV after a status change.
+- The `CV` button opens `assets/cv/Kanghwi_Lee_CV%20Public.pdf`.
+- The first research card no longer displays the special-issue note.
+- The Trajectory Variance research card and submitted-publication entry each include a `Submitted Manuscript` link.
