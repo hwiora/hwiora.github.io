@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kanghwi Lee — Ph.D. Candidate at ETH Zurich working on machine learning for real-world audio and biological signals.">
+  <meta name="author" content="Kanghwi Lee">
+  <meta property="og:title" content="Kanghwi Lee | Research">
+  <meta property="og:description" content="Machine Learning for Real-World Audio and Biological Signals">
+  <meta property="og:type" content="website">
+  <title>Kanghwi Lee | Research</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="#top" aria-label="Kanghwi Lee, home">Kanghwi Lee</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#software">Software</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <p class="eyebrow">Ph.D. Candidate · Institute of Neuroinformatics, ETH Zurich</p>
+        <h1 id="hero-title">Kanghwi Lee</h1>
+        <p class="positioning">Machine Learning for Real-World Audio and Biological Signals</p>
+        <p class="hero-summary">
+          Research on large-scale real-world vocalization data, learned audio representations,
+          data curation workflows, and generative modeling of developmental change.
+        </p>
+        <div class="hero-links" aria-label="Profile links">
+          <!-- CV LINK: After final public CV review, place the file at assets/cv/Kanghwi_Lee_CV.pdf and enable this link:
+          <a class="button button-primary" href="assets/cv/Kanghwi_Lee_CV.pdf">CV</a>
+          -->
+          <a class="button button-primary" href="https://github.com/hwiora" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button" href="https://scholar.google.com/citations?user=83nhFawAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a class="button" href="https://www.linkedin.com/in/kanghwi-kenny-lee-63a70521a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button" href="mailto:kanlee@ini.ethz.ch">Email</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container narrow">
+        <h2 id="about-title">About</h2>
+        <p>
+          I am a Ph.D. candidate at the Institute of Neuroinformatics, ETH Zurich, working at the
+          intersection of audio machine learning and computational neuroscience. My research focuses
+          on large-scale real-world vocalization data, learned audio representations, data curation
+          and annotation workflows, and generative modeling of developmental change. I develop
+          computational methods for analyzing biological acoustic signals, including human-in-the-loop
+          clustering workflows and counterfactual modeling over latent audio representations. I am also
+          interested in adjacent applied research problems where robust modeling of real-world acoustic
+          or biological signals is central.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="research-title">Selected Research</h2>
+          <p>Selected projects with documented implementation and evaluation contributions.</p>
+        </div>
+
+        <div class="research-grid">
+          <article class="card">
+            <div class="card-meta">
+              <span class="tag">Published</span>
+              <span class="meta-text">Applied Sciences, 2026</span>
+            </div>
+            <h3>Scalable Semi-Automated Clustering for Vocalization Data</h3>
+            <p>
+              Developed a workflow combining Whisper-derived embeddings, clustering, and expert
+              proofreading for vocalization analysis. On a benchmark of 1,454 zebra finch
+              vocalizations, the semi-automated workflow achieved <strong>ARI&nbsp;=&nbsp;0.73</strong>
+              and <strong>NMI&nbsp;=&nbsp;0.81</strong>, while reducing annotation time by approximately
+              <strong>50%</strong> relative to fully manual annotation.
+            </p>
+            <p>
+              The workflow is also being applied within my doctoral research to approximately
+              <strong>80,000 hours</strong> of recordings.
+            </p>
+            <div class="card-links">
+              <a href="https://doi.org/10.3390/app16020810" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="https://github.com/hwiora/semi_automated_clustering" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span class="tag tag-submitted">Submitted for review</span>
+              <span class="meta-text">Interspeech 2026</span>
+            </div>
+            <h3>Trajectory Variance: An Unsupervised Measure of Developmental Vocal Plasticity</h3>
+            <p>
+              Developed an age-conditioned model over VAE latent representations that predicts
+              counterfactual developmental shifts using mini-batch optimal-transport matching.
+              The method measures predicted vocal change across developmental ages without
+              requiring vocalization-type labels.
+            </p>
+            <p>
+              Evaluated on three zebra finches with <strong>183K–274K vocalizations per bird</strong>,
+              trajectory variance separated song syllables from calls after controlling for duration
+              (<strong>Cohen's d&nbsp;=&nbsp;0.29–0.57</strong>; <strong>AUC&nbsp;=&nbsp;0.58–0.67</strong>).
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/hwiora/trajectory_variance" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </article>
+        </div>
+
+        <aside class="related-work" aria-label="Related contributing work">
+          <p>
+            <strong>Related contributing work.</strong> Co-author on research applying Whisper-based
+            representations to human and animal voice activity detection, with contributions to
+            dataset construction and baseline-related evaluation.
+            <a href="https://doi.org/10.1109/ICASSP48485.2024.10447620" target="_blank" rel="noopener noreferrer">ICASSP 2024 paper</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="publications" aria-labelledby="publications-title">
+      <div class="container narrow">
+        <h2 id="publications-title">Publications</h2>
+
+        <h3 class="subheading">Published</h3>
+        <ol class="publication-list">
+          <li>
+            <strong>Kanghwi Lee</strong>, Maris Basha, Anja T. Zai, and Richard H. R. Hahnloser.
+            “Benchmarking Automated and Semi-Automated Vocal Clustering Methods.”
+            <em>Applied Sciences</em>, 16, 810, 2026.
+            <a href="https://doi.org/10.3390/app16020810" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+          <li>
+            Nianlong Gu, <strong>Kanghwi Lee</strong>, Maris Basha, Sumit Kumar Ram, Guanghao You,
+            and Richard H. R. Hahnloser.
+            “Positive Transfer of the Whisper Speech Transformer to Human and Animal Voice Activity Detection.”
+            <em>ICASSP</em>, 2024.
+            <a href="https://doi.org/10.1109/ICASSP48485.2024.10447620" target="_blank" rel="noopener noreferrer">DOI</a>
+          </li>
+        </ol>
+
+        <h3 class="subheading">Submitted</h3>
+        <ol class="publication-list">
+          <li>
+            <strong>Kanghwi Lee.</strong>
+            “Trajectory Variance: An Unsupervised Measure of Developmental Vocal Plasticity.”
+            Submitted for review to <em>Interspeech 2026</em>.
+            <a href="https://github.com/hwiora/trajectory_variance" target="_blank" rel="noopener noreferrer">Code</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="software" aria-labelledby="software-title">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="software-title">Software / Code</h2>
+          <p>Public research repositories supporting selected projects.</p>
+        </div>
+
+        <div class="software-grid">
+          <article class="software-item">
+            <h3><a href="https://github.com/hwiora/semi_automated_clustering" target="_blank" rel="noopener noreferrer">semi_automated_clustering</a></h3>
+            <p>
+              Public code supporting a semi-automated workflow for clustering and reviewing
+              vocalization data using learned audio representations and interactive analysis.
+            </p>
+          </article>
+          <article class="software-item">
+            <h3><a href="https://github.com/hwiora/trajectory_variance" target="_blank" rel="noopener noreferrer">trajectory_variance</a></h3>
+            <p>
+              Public code related to VAE/optimal-transport-based counterfactual modeling and
+              trajectory-variance analysis of vocal development.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container narrow">
+        <h2 id="contact-title">Opportunities &amp; Contact</h2>
+        <p>
+          I am currently exploring selected Fall 2026 internship and applied research opportunities
+          in audio ML, machine listening, representation learning, and generative modeling of acoustic
+          or biological signals. I am also interested in closely aligned academic research directions
+          following my Ph.D.
+        </p>
+        <p class="contact-line">
+          <a class="button button-primary" href="mailto:kanlee@ini.ethz.ch">kanlee@ini.ethz.ch</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Kanghwi Lee</p>
+      <p>Institute of Neuroinformatics, ETH Zurich</p>
+    </div>
+  </footer>
+</body>
+</html>
