@@ -478,3 +478,20 @@ h2 {
     transition-duration: 0.001ms !important;
   }
 }
+
+.tag-conference {
+  color: #3c4d67;
+  background: #eef1f6;
+}
+
+.card-note {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.88rem !important;
+}
+
+.card-note + .card-links {
+  margin-top: 0.3rem;
+}

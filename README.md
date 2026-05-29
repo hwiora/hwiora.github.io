@@ -1,8 +1,8 @@
-# Kanghwi Lee — Personal Research Website
+# Kanghwi Lee - GitHub Pages Website Update
 
-A single-page static website prepared for deployment as a GitHub Pages user site.
+Deploy-ready replacement files for the live user site at `https://hwiora.github.io`.
 
-## Files
+## Included files
 
 ```text
 hwiora.github.io/
@@ -10,43 +10,26 @@ hwiora.github.io/
 ├── styles.css
 ├── .nojekyll
 └── assets/
-    └── cv/
-        └── Kanghwi_Lee_CV.pdf   # add after final public CV review
+    ├── cv/
+    │   └── Kanghwi_Lee_CV.pdf
+    └── papers/
+        └── Lee_COSYNE2024_Extended_Abstract.pdf
 ```
 
-The site has no external JavaScript libraries, font dependencies, or build process.
+## What changed
 
-## CV link before deployment
+- Enabled the CV button in the hero section and bundled the final CV PDF.
+- Updated the headline summary and About text to foreground representation learning, foundation model adaptation, large-scale audio data curation, and generative modeling.
+- Expanded Selected Research to four items: clustering workflow, WhisperSeg, trajectory variance, and COSYNE vocal-template modeling.
+- Added WhisperSeg's segment-wise F1 result and ICASSP positioning.
+- Added the COSYNE extended abstract PDF as a local site asset.
+- Expanded Publications into published papers, submitted manuscript, and conference abstract.
+- Added the Applied Sciences special issue note to the clustering research card.
 
-The CV link is intentionally not shown in `index.html` until the public CV is reviewed. After the final PDF is ready:
+## Upload to GitHub Pages
 
-1. Save it as `assets/cv/Kanghwi_Lee_CV.pdf`.
-2. In `index.html`, locate the comment beginning `CV LINK` in the Hero section.
-3. Uncomment the CV anchor element.
+Upload the **contents** of this folder to the root of your existing `hwiora.github.io` repository, preserving the `assets/` folder structure. Committing these files replaces the current homepage and activates the new CV/PDF links.
 
-## Local preview
+## Status-sensitive item
 
-From the repository directory:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000` in a browser.
-
-## GitHub Pages deployment
-
-Target user-site address: `https://hwiora.github.io`
-
-As checked on 2026-05-29, a public `hwiora/hwiora.github.io` repository was not yet present.
-
-1. Create a repository named exactly `hwiora.github.io` under the GitHub account `hwiora`.
-2. Upload or push `index.html`, `styles.css`, `.nojekyll`, and the `assets/` directory to the repository root.
-3. In the repository, open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Select the `main` branch and the `/ (root)` folder, then save.
-6. After GitHub publishes the site, open `https://hwiora.github.io`.
-
-## Status-sensitive content
-
-The page describes *Trajectory Variance: An Unsupervised Measure of Developmental Vocal Plasticity* as **Submitted for review to Interspeech 2026**. Update both the research card and publication entry if the status changes.
+`Trajectory Variance: An Unsupervised Measure of Developmental Vocal Plasticity` is shown as **Submitted for review to Interspeech 2026**. Update the research card, publication entry, and CV after a status change.
