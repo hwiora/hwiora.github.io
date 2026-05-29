@@ -11,7 +11,7 @@ hwiora.github.io/
 ├── .nojekyll
 └── assets/
     ├── cv/
-    │   └── Kanghwi_Lee_CV.pdf
+    │   └── Kanghwi_Lee_CV Public.pdf
     └── papers/
         └── Lee_COSYNE2024_Extended_Abstract.pdf
 ```
