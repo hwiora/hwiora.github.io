@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kanghwi Lee - Ph.D. Candidate at ETH Zurich working on audio machine learning and computational neuroscience.">
+  <meta name="description" content="Kanghwi (Kenny) Lee - speech and audio ML researcher, Ph.D. candidate at ETH Zurich and research intern at NAVER Cloud.">
   <meta name="author" content="Kanghwi Lee">
-  <meta property="og:title" content="Kanghwi Lee | Research">
-  <meta property="og:description" content="Audio Machine Learning and Computational Neuroscience">
+  <meta property="og:title" content="Kanghwi (Kenny) Lee | Speech &amp; Audio ML">
+  <meta property="og:description" content="Speech and audio machine learning: watermarking for generated speech, audio foundation models, and large-scale audio.">
   <meta property="og:type" content="website">
-  <title>Kanghwi Lee | Research</title>
+  <title>Kanghwi (Kenny) Lee | Speech &amp; Audio ML</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d2621dc79abd4ed28c4be0346bbd7597"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
@@ -31,18 +31,18 @@
   <main id="main-content">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-inner">
-        <p class="eyebrow">Ph.D. Candidate &middot; Institute of Neuroinformatics, ETH Zurich</p>
-        <h1 id="hero-title">Kanghwi Lee</h1>
-        <p class="positioning">Audio Machine Learning and Computational Neuroscience</p>
+        <p class="eyebrow">Ph.D. Candidate, ETH Zurich &middot; Research Intern, NAVER Cloud</p>
+        <h1 id="hero-title">Kanghwi (Kenny) Lee</h1>
+        <p class="positioning">Speech and Audio Machine Learning</p>
         <p class="hero-summary">
-          Representation learning, foundation model adaptation, and generative modeling
-          for large-scale acoustic data and natural behavior.
+          Watermarking for generated speech, adapting audio foundation models,
+          and learning from large-scale audio.
         </p>
         <div class="hero-links" aria-label="Profile links">
           <a class="button" href="assets/cv/Kanghwi_Lee_CV_Public.pdf">CV</a>
           <a class="button" href="https://github.com/hwiora" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a class="button" href="https://scholar.google.com/citations?user=83nhFawAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-          <a class="button" href="https://www.linkedin.com/in/kanghwi-kenny-lee-63a70521a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button" href="https://www.linkedin.com/in/kanghwi-kenny-lee" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a class="button" href="mailto:kanlee@ini.ethz.ch">Email</a>
         </div>
       </div>
@@ -52,13 +52,20 @@
       <div class="container narrow">
         <h2 id="about-title">About</h2>
         <p>
-          I am a Ph.D. candidate at the Institute of Neuroinformatics, ETH Zurich, developing machine learning
-          methods for large-scale acoustic data and vocal behavior. My research spans representation learning,
-          foundation model adaptation, and generative modeling, with work on Whisper-based segmentation,
-          human-in-the-loop clustering, and counterfactual analysis of developmental vocal plasticity. I developed
-          and evaluated an audio curation workflow that reduced annotation time by approximately 50% on a
-          1,454-vocalization benchmark and has been applied to approximately 80,000 hours of recordings.
-          My work is grounded in computational neuroscience and aimed at robust, scalable modeling of real-world audio.
+          I'm a Ph.D. candidate at the Institute of Neuroinformatics, ETH Zurich, advised by Richard Hahnloser,
+          graduating in July 2027. I work on speech and audio machine learning.
+        </p>
+        <p>
+          As a research intern on NAVER Cloud's Voice Synthesis team, I developed Redwing, a watermark for speech
+          language models that stays detectable after repeated neural-codec resynthesis. I'm now working on
+          nonverbal vocalization generation in speech models. In my Ph.D., I fine-tuned Whisper for audio
+          segmentation, built a clustering workflow that organized about 100M vocalizations from 80,000 hours of
+          recordings, and developed Trajectory Variance, a label-free measure of vocal change built on a
+          conditional generative model.
+        </p>
+        <p>
+          I trained in computer science and statistics at Korea University and in computational neuroscience
+          at the University of Zurich.
         </p>
       </div>
     </section>
@@ -67,48 +74,68 @@
       <div class="container">
         <div class="section-heading">
           <h2 id="research-title">Selected Research</h2>
-          <p>Scalable audio workflows, representation learning, generative modeling, and computational neuroscience.</p>
+          <p>Speech watermarking, audio foundation models, and learning from large-scale audio.</p>
         </div>
 
         <div class="research-grid">
-          
           <article class="card">
-            <h3>Trajectory Variance for Counterfactual Modeling of Vocal Development</h3>
+            <h3>Redwing: Watermarking Generated Speech That Survives Codec Resynthesis</h3>
             <p class="project-paper">
-              “Trajectory Variance: An Unsupervised Measure of Developmental Vocal Plasticity.”
-              Accepted to <em>Interspeech 2026</em>.
+              &ldquo;Tokens Change, Structure Endures: Spectral Watermarking for Generated Speech.&rdquo;
+              arXiv, 2026. Under review at <em>ICLR 2027</em>. Work done at NAVER Cloud.
             </p>
             <p>
-              Designed and implemented an age-conditioned counterfactual model using VAE latent representations and
-              mini-batch optimal-transport matching, with single-forward-pass latent displacement prediction.
+              Speech language models generate codec tokens, and re-encoding the audio with a neural codec replaces
+              many of them, which erases token-level watermarks. Redwing models these token substitutions as a graph
+              and uses constrained optimization to design the watermark embedding and detector together. It is applied
+              through logit biasing at generation time, without retraining the model or the codec.
             </p>
             <p>
-              Evaluated on approximately <strong>680K vocalizations</strong> across three zebra finches; the model
-              outperformed Gaussian OT, per-age k-NN, and per-age OT baselines, with
-              <strong>Cohen's d&nbsp;=&nbsp;0.29&ndash;0.57</strong> and <strong>AUC&nbsp;=&nbsp;0.58&ndash;0.67</strong>
-              after controlling for duration.
+              On Moshi, <strong>80.7%</strong> of outputs are still detected after <strong>eight Mimi resynthesis
+              passes</strong> at a 1% false-positive rate, versus under 10% for token-level baselines. Rebuilt for the
+              CosyVoice3 and MOSS-TTS codecs, it reaches <strong>84.7%</strong> and <strong>99.8%</strong>, versus
+              9.2% and 6.2% for KGW.
             </p>
             <div class="card-links">
-              <a href="assets/papers/Interspeech_2026__Trajectory_Variance__An_Unsupervised_Measure_of_Developmental_Vocal_Plasticity_CamReady.pdf">Paper</a>
+              <a href="https://arxiv.org/abs/2609.33774" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="https://hwiora.github.io/redwing-demo/">Audio Demo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Trajectory Variance: A Label-Free Measure of Vocal Change</h3>
+            <p class="project-paper">
+              &ldquo;Trajectory Variance: An Unsupervised Measure of Developmental Vocal Plasticity in Birdsong.&rdquo;
+              <em>Interspeech 2026</em>, oral (sole author).
+            </p>
+            <p>
+              An age-conditioned generative model, trained with optimal-transport pairing on about 680K zebra finch
+              vocalizations, predicts how each vocalization would change at other ages. Trajectory Variance, the
+              spread of these predicted shifts in latent space, <strong>scores developmental change without
+              labels</strong>. It <strong>separated learned song from innate calls</strong> where nonparametric
+              baselines did not.
+            </p>
+            <div class="card-links">
+              <a href="https://arxiv.org/abs/2607.03496" target="_blank" rel="noopener noreferrer">Paper</a>
               <a href="https://github.com/hwiora/trajectory_variance" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </article>
-          
+
           <article class="card">
-            <h3>Large-Scale Audio Representation Workflow and Human-in-the-Loop Clustering</h3>
+            <h3>Human-in-the-Loop Clustering at Scale</h3>
             <p class="project-paper">
-              “Benchmarking Automated and Semi-Automated Vocal Clustering Methods.”
+              &ldquo;Benchmarking Automated and Semi-Automated Vocal Clustering Methods.&rdquo;
               <em>Applied Sciences</em>, 2026.
             </p>
             <p>
-              Developed a semi-automated workflow using Whisper encoder embeddings, clustering, and interactive
-              expert review to organize real-world vocalization data. On a benchmark of <strong>1,454</strong>
-              zebra finch vocalizations, the workflow achieved <strong>ARI&nbsp;=&nbsp;0.73</strong> and
-              <strong>NMI&nbsp;=&nbsp;0.81</strong>, while reducing annotation time by approximately
-              <strong>50%</strong>.
+              An embedding-based workflow in which annotators define clusters and review outliers instead of labeling
+              every item, so human effort scales with acoustic diversity rather than dataset size. On a
+              1,454-vocalization benchmark, its clusters matched the experts nearly as well as the experts matched each
+              other (<strong>ARI 0.73 vs. 0.78</strong>).
             </p>
             <p>
-              Applied the workflow to approximately <strong>80,000 hours</strong> of recordings for downstream doctoral research.
+              With WhisperSeg, it clustered about <strong>100M vocalizations</strong> from <strong>80,000 hours</strong>
+              of recordings with about 200 hours of human work.
             </p>
             <div class="card-links">
               <a href="https://doi.org/10.3390/app16020810" target="_blank" rel="noopener noreferrer">Paper</a>
@@ -117,38 +144,19 @@
           </article>
 
           <article class="card">
-            <h3>WhisperSeg: Long-Context Voice Activity Detection for Human and Animal Recordings</h3>
+            <h3>WhisperSeg: Whisper for Voice Activity Detection in Human and Animal Audio</h3>
             <p class="project-paper">
-              “Positive Transfer of the Whisper Speech Transformer to Human and Animal Voice Activity Detection.”
-              <em>ICASSP</em>, 2024.
+              &ldquo;Positive Transfer of the Whisper Speech Transformer to Human and Animal Voice Activity Detection.&rdquo;
+              <em>ICASSP</em>, 2024. Second author.
             </p>
             <p>
-              WhisperSeg adapts a pretrained Whisper Transformer for long-context, token-based voice activity detection,
-              generating onset, offset, and vocalization-type tokens directly from audio spectrograms across human and animal recordings.
+              WhisperSeg fine-tunes Whisper to output onset, offset, and vocalization-type tokens directly from
+              spectrograms, across human and animal recordings.
             </p>
-            <p>
-              Achieved <strong>segment-wise F1&nbsp;=&nbsp;0.9966</strong> on adult zebra finch recordings and
-              outperformed frame-wise baselines in segment-wise evaluation across all tested datasets, including noisy marmoset and human recordings.
-            </p>
-            <p class="card-note">Co-author; developed dataset-processing and baseline-evaluation components for the study, then applied segmentation outputs in subsequent large-scale analysis workflows.</p>
+            <p class="card-note">I contributed dataset processing, baseline evaluation, and cross-domain analysis.</p>
             <div class="card-links">
               <a href="https://doi.org/10.1109/ICASSP48485.2024.10447620" target="_blank" rel="noopener noreferrer">Paper</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>Computational Modeling of Vocal Template Formation</h3>
-            <p class="project-paper">
-              “Serial Tutoring Reveals a Composite Song Template.”
-              <em>COSYNE</em>, 2024.
-            </p>
-            <p>
-              Investigated how juvenile zebra finches form composite song templates from sequential tutor exposure.
-              Developed a <strong>Bayesian causal-inference model</strong> fitted to behavioral data from 19 juvenile birds
-              and 26 syllables.
-            </p>
-            <div class="card-links">
-              <a href="assets/papers/Lee_COSYNE2024_Extended_Abstract.pdf">Extended Abstract</a>
+              <a href="https://github.com/nianlonggu/WhisperSeg" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </article>
         </div>
@@ -161,10 +169,18 @@
 
         <ol class="publication-list">
           <li>
+            <strong>Kanghwi Lee</strong>, Kyeongseok Jeong, and Jeongmin Liu.
+            “Tokens Change, Structure Endures: Spectral Watermarking for Generated Speech.”
+            arXiv:2609.33774, 2026. Under review at <em>ICLR 2027</em>.
+            <a href="https://arxiv.org/abs/2609.33774" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <a href="https://hwiora.github.io/redwing-demo/">Demo</a>
+          </li>
+          <li>
             <strong>Kanghwi Lee.</strong>
-            “Trajectory Variance: An Unsupervised Measure of Developmental Vocal Plasticity.”
-            Accepted to <em>Interspeech 2026</em>.
-            <a href="assets/papers/Interspeech_2026__Trajectory_Variance__An_Unsupervised_Measure_of_Developmental_Vocal_Plasticity_CamReady.pdf">Paper</a>
+            “Trajectory Variance: An Unsupervised Measure of Developmental Vocal Plasticity in Birdsong.”
+            <em>Interspeech 2026</em> (oral).
+            <a href="https://arxiv.org/abs/2607.03496" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <a href="https://doi.org/10.21437/Interspeech.2026-3557" target="_blank" rel="noopener noreferrer">DOI</a>
             <a href="https://github.com/hwiora/trajectory_variance" target="_blank" rel="noopener noreferrer">Code</a>
           </li>
           <li>
@@ -180,6 +196,7 @@
             “Positive Transfer of the Whisper Speech Transformer to Human and Animal Voice Activity Detection.”
             <em>ICASSP</em>, 2024.
             <a href="https://doi.org/10.1109/ICASSP48485.2024.10447620" target="_blank" rel="noopener noreferrer">DOI</a>
+            <a href="https://github.com/nianlonggu/WhisperSeg" target="_blank" rel="noopener noreferrer">Code</a>
           </li>
           <li>
             <strong>Kanghwi Lee</strong>, Richard H. R. Hahnloser, Hazem Toutounji, and Dina Lipkind.
@@ -211,6 +228,12 @@
               Counterfactual modeling and trajectory-variance analysis using VAE latent representations and optimal-transport matching.
             </p>
           </article>
+          <article class="software-item">
+            <h3><a href="https://github.com/nianlonggu/WhisperSeg" target="_blank" rel="noopener noreferrer">WhisperSeg</a></h3>
+            <p>
+              Whisper-based voice activity detection and segmentation for human and animal recordings (contributor).
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -219,7 +242,8 @@
       <div class="container narrow">
         <h2 id="contact-title">Opportunities &amp; Contact</h2>
         <p>
-         I’m currently exploring Research Scientist, Research Engineer, and Applied Scientist opportunities in audio/speech ML, generative modeling, and multimodal AI. I’m also open to research internships that strongly align with these areas.
+          I'm looking for research scientist and research engineer roles in speech and audio ML starting after my
+          Ph.D. in mid-2027, and for research internships or student researcher positions between February and July 2027.
         </p>
         <p class="contact-line">
           <a class="button button-primary" href="mailto:kanlee@ini.ethz.ch">kanlee@ini.ethz.ch</a>
